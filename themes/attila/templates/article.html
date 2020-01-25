@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{# <!-- Choosing cover image --> #}
+{% if article.cover %}
+  {% if article.cover|lower|truncate(4, True, '') == "http" %}
+    {% set selected_cover = article.cover %}
+  {% else %}
+    {% set selected_cover = SITEURL+"/"+article.cover %}
+  {% endif %}
+{% elif article.og_image %}
+  {% if article.og_image|lower|truncate(4, True, '') == "http" %}
+    {% set selected_cover = article.og_image %}
+  {% else %}
+    {% set selected_cover = SITEURL+"/"+article.og_image %}
+  {% endif %}
+{% elif article.color %}
+  {% set selected_color = article.color %}
+{% elif HEADER_COVER %}
+  {% if HEADER_COVER|lower|truncate(4, True, '') == "http" %}
+    {% set selected_cover = HEADER_COVER %}
+  {% else %}
+    {% set selected_cover = SITEURL+"/"+HEADER_COVER %}
+  {% endif %}
+{% elif HEADER_COLOR %}
+  {% set selected_color = HEADER_COLOR %}
+{% endif %}
+
+{% block canonical_url %}<link href="{{ SITEURL }}/{{ article.url }}" rel="canonical" />{% endblock canonical_url %}
+{% block head %}
+  {{ super() }}
+
+  {% for keyword in article.keywords %}
+    <meta name="keywords" content="{{keyword}}" >
+  {% endfor %}
+
+  {% if description %}
+    <meta name="description" content="{{ description }}">
+  {% elif article.headline %}
+    <meta name="description" content="{{ article.headline }}">
+  {% elif article.summary %}
+    <meta name="description" content="{{ article.summary|striptags|truncate(140) }}">
+  {% endif %}
+
+  {% for author in article.authors %}
+    <meta name="author" content="{{ author }}">
+  {% endfor %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{tag}}">
+  {% endfor %}
+
+  {% include 'partials/og_article.html' %}
+  {% include 'partials/jsonld_article.html' %}
+{% endblock %}
+
+{% block header %}
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" {% if selected_cover or selected_color %}class="has-cover"{% endif %}>
+      <div class="inner">
+        <nav id="navigation">
+          {% if SITE_LOGO %}
+            <span class="blog-logo">
+                <a href="{{ SITEURL }}/"><img src="{{SITE_LOGO}}" alt="Blog Logo" /></a>
+            </span>
+          {% else %}
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="{{ SITEURL }}/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          {% endif %}
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">{{ article.title }}</h1>
+        <!-- TODO : Proper class for headline -->
+        {% if article.headline %}
+            <span class="blog-description">{{ article.headline }}</span>
+        {% endif %}
+        
+        {% if selected_cover %}
+            <div class="post-cover cover" style="background-image: url('{{ selected_cover }}')">
+        {% elif selected_color %}
+            <div class="post-cover cover" style="background-color: {{ selected_color }}">
+        {% endif %}
+      </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                {{article.content}}
+            </section>
+
+            <section class="post-info">
+              
+
+                {% if article.tags %}
+                <aside class="post-tags">
+                    {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a>{% if not loop.last %}{% endif %}{% endfor %}
+                </aside>
+                {% endif %}
+
+                <div class="clear"></div>
+
+                
+                </section>
+
+                <aside class="post-nav">
+                    {% if article.next_article %}
+                    <a class="post-nav-next" href="{{ SITEURL }}/{{ article.next_article.url}}">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-left"></i>
+                                <h2 class="post-nav-title">{{ article.next_article.title }}</h2>
+                            <p class="post-nav-excerpt">{{ article.next_article.summary|striptags|truncate(90) }}</p>
+                        </section>
+                    </a>
+                    {% endif %}
+                    {% if article.prev_article %}
+                    <a class="post-nav-prev" href="{{ SITEURL }}/{{ article.prev_article.url}}">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">{{ article.prev_article.title }}</h2>
+                            <p class="post-nav-excerpt">{{ article.prev_article.summary|striptags|truncate(90) }}</p>
+                        </section>
+                    </a>
+                    {% endif %}
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+{% endblock content %}

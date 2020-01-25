@@ -1,0 +1,19 @@
+Devils Punch
+############
+:date: 2020-01-19 17:11
+:author: admin
+:category: Recipes
+:tags: tequila
+:slug: devils-punch
+:status: published
+
+* 2 oz. Tequila
+* 1 oz. Triple Sec
+* 1 oz. Limoncello
+* 1 oz. sour mix
+
+Shake and strain into a highball glass. Optionally, add a dash of OJ.
+
+(Yes, you are correct, it's a modified margarita.)
+
+
