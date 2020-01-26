@@ -19,6 +19,8 @@
           {% endif %}
       {% endif %}
 
+          <li>Tags:</li>
+
       {# tags in the menu #}
       {% for tag, articles in tags|sort %}
         <li role="presentation"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
