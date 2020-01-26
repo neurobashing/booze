@@ -19,8 +19,4 @@ You can reach me at gregg@thebooze.ninja
 
 Pitter patter, let's get at 'er.
 
-.. figure:: images/tequila_shots.jpg
-   :alt: 
-   :figclass: wp-image-96
-
 

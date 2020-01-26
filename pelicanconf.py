@@ -31,3 +31,7 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 HEADER_COVER = "images/site_logo.jpg"
+
+# I think this is a good idea?
+DISPLAY_PAGES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = True
