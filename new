@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+
+import datetime
+import os
+
+title = input("Enter the name of the thing:")
+
+filename = title.replace(" ", "-") + ".md"
+now = datetime.datetime.now()
+post_date = str(now.year) + "-" + str(now.month) + "-" + str(now.day) + " " + str(now.hour) + ":" + str(now.minute)
+
+file_content = f"""
+Title: {title}
+Date: {post_date}
+Category: Recipes
+Tags: 
+Slug: {title}
+Authors: admin
+Summary: {title}
+
+"""
+
+f = open(os.path.join('content', filename), 'w')
+f.write(file_content)
+f.close()
+
+print("Now, edit content/" + filename)

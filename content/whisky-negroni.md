@@ -1,0 +1,13 @@
+Title: Whisky Negroni
+Date: 2020-01-26 15:00
+Category: Recipes
+Tags: classic, rye, Campari
+Slug: Whisky Negroni
+Authors: admin
+Summary: Whisky Negroni
+
+Equal portions of whisky (preferably a good rye), Campari, and sweet vermouth.
+
+Stir and serve in a highball/rocks glass with ice and lemon or orange peel garnish.
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/neurobashing/49444942737/in/dateposted-public/" title="Untitled"><img src="https://live.staticflickr.com/65535/49444942737_e4a02eae1a_b.jpg" width="768" height="1024" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
