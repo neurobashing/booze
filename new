@@ -9,8 +9,7 @@ filename = title.replace(" ", "-") + ".md"
 now = datetime.datetime.now()
 post_date = str(now.year) + "-" + str(now.month) + "-" + str(now.day) + " " + str(now.hour) + ":" + str(now.minute)
 
-file_content = f"""
-Title: {title}
+file_content = f"""Title: {title}
 Date: {post_date}
 Category: Recipes
 Tags: 
