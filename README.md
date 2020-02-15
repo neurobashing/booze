@@ -12,8 +12,5 @@ for FILE in `ls`; do ./fix.py $FILE; done
 to fix the resulting markdown files.
 
 
-add google analytics or enable access logging on the bucket
-
 get pics for drinks
 
-Search? Can I do that with a static site?
