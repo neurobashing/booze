@@ -14,3 +14,6 @@ to fix the resulting markdown files.
 
 get pics for drinks
 
+startup dev server:
+`pelican -l -t themes/attila -r`
+
