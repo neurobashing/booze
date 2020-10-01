@@ -1,4 +1,4 @@
 #!/bin/sh
 
-source venv/bin/activate
+source ~/.virtualenvs/boozeninja/bin/activate
 make s3_upload
