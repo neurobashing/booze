@@ -1,0 +1,23 @@
+{
+  "name": "booze",
+  "version": "1.0.0",
+  "description": "TODO:",
+  "main": "index.js",
+  "dependencies": {
+    "lunr": "^2.3.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neurobashing/booze.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neurobashing/booze/issues"
+  },
+  "homepage": "https://github.com/neurobashing/booze#readme"
+}

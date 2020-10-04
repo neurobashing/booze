@@ -1,0 +1,19 @@
+Title: Brandy Milk Punch
+Date: 2020-10-02 17:16
+Category: Recipes
+Tags: brandy,classic
+Slug: Brandy Milk Punch
+Authors: jgt
+Summary: Brandy Milk Punch
+
+
+* 1 Tbsp of fine white sugar
+* 2 Tbsp of water
+* 2 oz of brandy (1757 Virginia Brandy) 
+* Tumbler of shaved ice.
+
+Fill glass with milk (a cup and a half or so), shake ingredients well together, and grate with nutmeg on top.
+
+I expected to hate this, and while it's not a thing I think I will drink very often (if ever again), it's actually quite delightful. I just don't like milk enough to drink it "on the reg".
+
+
