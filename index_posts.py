@@ -10,7 +10,6 @@ id - url
 title - title
 tags - tags
 body - the body of the post
-
 """
 
 markdownfiles = [ filename for filename in listdir("content") if filename.endswith("md") ]
@@ -37,8 +36,4 @@ for a_file in markdownfiles:
 
     """
     TODO:
-    * the remainder should be stripped of measures, because it's pointless noise
-    * strip whitespace from tags
-    * and titles
-    * slurp them all up into a single JS obj (an array) that we will jsonify in the publish process
     """

@@ -53,7 +53,7 @@ new_filecontents.append("\n")
 for item in filecontents[8:]:
     new_filecontents.append(item)
 
-# delete sole \n lines
+# delete sole \n lines?
 filestring = "".join(new_filecontents)
 
 if not os.path.isfile(file_to_open.replace(".rst", ".md")):
