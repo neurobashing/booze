@@ -14,6 +14,6 @@ Title: French 75
 
 Shake (sans champagne) with ice, strain into a flute. Top with champagne and garnish with a lemon twist.
 
-Named after `this <https://en.wikipedia.org/wiki/Canon_de_75_mod%C3%A8le_1897>`__.
+Named after [this](https://en.wikipedia.org/wiki/Canon_de_75_mod%C3%A8le_1897).
 
 
