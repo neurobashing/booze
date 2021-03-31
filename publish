@@ -1,4 +1,6 @@
 #!/bin/sh
 
-source venv/bin/activate
+source ~/.virtualenvs/boozeninja/bin/activate
+export PATH=${PATH}:/usr/local/bin
+cd /Users/gregg/Projects/booze
 make s3_upload

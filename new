@@ -20,6 +20,11 @@ Summary: {title}
 
 """
 
+if os.path.exists(os.path.join('content', filename)):
+    print("That already exists. Try again.")
+    exit()
+
+
 f = open(os.path.join('content', filename), 'w')
 f.write(file_content)
 f.close()

@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# not sure I remember what this fixes ...
+
 import re
 import sys
 import os
