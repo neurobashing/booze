@@ -3,6 +3,7 @@
 import datetime
 import os
 
+# TODO: make it a command line option.
 title = input("Enter the name of the thing:")
 
 filename = title.replace(" ", "-") + ".md"
